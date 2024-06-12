@@ -5,6 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  -- pack
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.angular" },
@@ -15,17 +16,19 @@ return {
   { import = "astrocommunity.pack.python" },
   -- import/override with your plugins folder
   { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
-  -- { import = "astrocommunity.workflow.hardtime-nvim" },
-  { import = "astrocommunity.utility.noice-nvim" },
+
+  -- editing-support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+
   {
+    -- workflow
     import = "astrocommunity.workflow.hardtime-nvim",
-    enabled = true,
   },
   -- media
   { import = "astrocommunity.media.vim-wakatime" },
+  -- utility
   { import = "astrocommunity.utility.noice-nvim" },
+
   {
     "noice.nvim",
     opts = {
@@ -57,7 +60,9 @@ return {
   { import = "astrocommunity.git.neogit" },
   -- scrolling
   { import = "astrocommunity.scrolling.neoscroll-nvim" },
+  -- motion
   { import = "astrocommunity.motion.nvim-surround" },
+  -- note-talking
   { import = "astrocommunity.note-taking.global-note-nvim" },
   { import = "astrocommunity.note-taking.neorg" },
 }
