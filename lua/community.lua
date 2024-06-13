@@ -10,18 +10,20 @@ return {
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.angular" },
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.typescript" },
+  -- { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.json" },
   -- import/override with your plugins folder
   { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
 
   -- editing-support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
 
+  -- workflow
   {
-    -- workflow
     import = "astrocommunity.workflow.hardtime-nvim",
   },
   -- media
@@ -65,4 +67,23 @@ return {
   -- note-talking
   { import = "astrocommunity.note-taking.global-note-nvim" },
   { import = "astrocommunity.note-taking.neorg" },
+  -- colorscheme
+  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
+  { import = "astrocommunity.colorscheme.mellifluous-nvim" },
+  { import = "astrocommunity.colorscheme.vscode-nvim" },
+  { import = "astrocommunity.colorscheme.miasma-nvim" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.tokyodark-nvim" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.aurora" },
+  { import = "astrocommunity.colorscheme.bluloco-nvim" },
+  { import = "astrocommunity.colorscheme.github-nvim-theme" },
+  { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
+  { import = "astrocommunity.colorscheme.nightfox-nvim" },
+  { import = "astrocommunity.colorscheme.dracula-nvim" },
+  { import = "astrocommunity.colorscheme.eldritch-nvim" },
+  -- recipes
+  -- { import = "astrocommunity.recipes.telescope-nvchad-theme" },
+  -- { import = "astrocommunity.recipes.neovide" },
+  -- { import = "astrocommunity.recipes.disable-tabline" },
 }
