@@ -29,12 +29,14 @@ return {
   -- media
   { import = "astrocommunity.media.vim-wakatime" },
   -- utility
-  -- { import = "astrocommunity.utility.noice-nvim" },
+  --[[ { import = "astrocommunity.utility.noice-nvim" }, ]]
 
   --[[ {
     "noice.nvim",
-
     opts = {
+      signature = {
+        enabled = false,
+      },
       routes = {
         {
           filter = {
