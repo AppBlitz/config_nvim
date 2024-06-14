@@ -28,39 +28,6 @@ return {
   },
   -- media
   { import = "astrocommunity.media.vim-wakatime" },
-  -- utility
-  --[[ { import = "astrocommunity.utility.noice-nvim" }, ]]
-
-  --[[ {
-    "noice.nvim",
-    opts = {
-      signature = {
-        enabled = false,
-      },
-      routes = {
-        {
-          filter = {
-            event = "msg_show",
-            any = {
-              { find = "%d+L, %d+B" },
-              { find = "; after #%d+" },
-              { find = "; before #%d+" },
-              { find = "%d fewer lines" },
-              { find = "%d more lines" },
-            },
-          },
-          view = "mini",
-        },
-        {
-          filter = {
-            event = "msg_show",
-            min_height = 20,
-          },
-          view = "messages",
-        },
-      },
-    },
-  }, ]]
   -- git
   { import = "astrocommunity.git.neogit" },
   -- scrolling
@@ -70,6 +37,34 @@ return {
   -- note-talking
   { import = "astrocommunity.note-taking.global-note-nvim" },
   { import = "astrocommunity.note-taking.neorg" },
+  {
+    "nvim-neorg/neorg",
+    opts = {
+      load = {
+        ["core.dirman"] = { -- Manages Neorg workspaces
+          config = {
+            workspaces = {
+              programacion = "~/projects/programacio",
+              notes = "~/projects/notes",
+              libros = "~/projects/libros/",
+            },
+          },
+        },
+
+        ["core.export"] = {
+          config = {
+            export_dir = "~/projects/notes/export",
+          },
+        },
+        ["core.export.markdown"] = {
+          config = {
+            extension = "md",
+          },
+        },
+        ["core.ui.calendar"] = {},
+      },
+    },
+  },
   -- colorscheme
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.mellifluous-nvim" },
@@ -86,7 +81,8 @@ return {
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.colorscheme.eldritch-nvim" },
   -- recipes
-  -- { import = "astrocommunity.recipes.telescope-nvchad-theme" },
-  -- { import = "astrocommunity.recipes.neovide" },
   -- { import = "astrocommunity.recipes.disable-tabline" },
+  -- markdown & latex
+  { import = "astrocommunity.markdown-and-latex.vimtex" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 }
