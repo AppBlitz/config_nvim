@@ -29,10 +29,11 @@ return {
   -- media
   { import = "astrocommunity.media.vim-wakatime" },
   -- utility
-  { import = "astrocommunity.utility.noice-nvim" },
+  -- { import = "astrocommunity.utility.noice-nvim" },
 
-  {
+  --[[ {
     "noice.nvim",
+
     opts = {
       routes = {
         {
@@ -57,7 +58,7 @@ return {
         },
       },
     },
-  },
+  }, ]]
   -- git
   { import = "astrocommunity.git.neogit" },
   -- scrolling
