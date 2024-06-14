@@ -47,21 +47,20 @@ return {
               programacion = "~/projects/programacio",
               notes = "~/projects/notes",
               libros = "~/projects/libros/",
+              University = "~/projects/University",
             },
+            default_workspace = "notes",
           },
         },
-
-        ["core.export"] = {
-          config = {
-            export_dir = "~/projects/notes/export",
-          },
-        },
-        ["core.export.markdown"] = {
-          config = {
-            extension = "md",
-          },
-        },
+        ["core.export"] = {},
+        ["core.export.markdown"] = {},
         ["core.ui.calendar"] = {},
+        ["core.concealer"] = {
+          config = {
+            icon_preset = "diamond",
+          },
+        },
+        ["core.summary"] = {},
       },
     },
   },
