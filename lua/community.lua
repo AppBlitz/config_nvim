@@ -54,7 +54,11 @@ return {
           },
         },
         ["core.export"] = {},
-        ["core.export.markdown"] = {},
+        ["core.export.markdown"] = {
+          config = {
+            extensions = "all",
+          },
+        },
         ["core.ui.calendar"] = {},
         ["core.concealer"] = {
           config = {
@@ -62,6 +66,7 @@ return {
           },
         },
         ["core.summary"] = {},
+        ["core.itero"] = {},
       },
     },
   },
