@@ -15,8 +15,8 @@ return {
         debounce = 75,
         keymap = {
           accept = "<M-l>",
-          --[[ next = "<M-]>",
-          prev = "<M-[>", ]]
+          --[[ next = "<M-k>",
+          prev = "<M-j>", ]]
         },
       },
     }

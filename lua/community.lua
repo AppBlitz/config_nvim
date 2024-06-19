@@ -5,6 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  --[[ { import = "astrocommunity.search.nvim-hlslens" }, ]]
   -- pack
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.java" },
