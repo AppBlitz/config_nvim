@@ -54,7 +54,11 @@ return {
             default_workspace = "notes",
           },
         },
-        ["core.export"] = {},
+        ["core.export"] = {
+          config = {
+            export_dir = "~/projects/export",
+          },
+        },
         ["core.export.markdown"] = {
           config = {
             extensions = "all",
@@ -91,4 +95,9 @@ return {
   -- markdown & latex
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  -- statusline
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  { import = "astrocommunity.recipes.telescope-nvchad-theme" },
+  -- diagnostics
+  -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
 }
