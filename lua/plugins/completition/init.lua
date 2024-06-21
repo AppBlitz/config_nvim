@@ -29,6 +29,33 @@ return { -- override nvim-cmp plugin
     opts.mapping["C-y"] = cmp.mapping.confirm {
       select = true,
     }
+    cmp.setup {
+      sources = {
+        -- Copilot Source
+        { name = "copilot", group_index = 2 },
+        -- Other Sources
+        { name = "nvim_lsp", group_index = 2 },
+        { name = "path", group_index = 2 },
+        { name = "luasnip", group_index = 2 },
+      },
+      enabled = function()
+        -- disable completion in comments
+        local context = require "cmp.config.context"
+        -- keep command mode completion enabled when cursor is in a comment
+        if vim.api.nvim_get_mode().mode == "c" then
+          return true
+        else
+          return not context.in_treesitter_capture "comment" and not context.in_syntax_group "Comment"
+        end
+      end,
+    }
+    lspkind.init {
+      symbol_map = {
+        Copilot = "",
+      },
+    }
+
+    vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
     -- configure `cmp-cmdline` as described in their repo: https://github.com/hrsh7th/cmp-cmdline#setup
     cmp.setup.cmdline("/", {
       mapping = cmp.mapping.preset.cmdline(),
@@ -65,7 +92,7 @@ return { -- override nvim-cmp plugin
             luasnip = "[LuaSnip]",
             nvim_lua = "[Lua]",
             latex_symbols = "[Latex]",
-            symbol_map = { Copilot = "" },
+            -- symbol_map = { Copilot = "" },
           },
         },
       },
