@@ -1,5 +1,5 @@
 
-## configuration
+## Configuration
 > Configuring neovim using AstroNvim
 
 
