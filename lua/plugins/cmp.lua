@@ -8,13 +8,22 @@ return { -- override nvim-cmp plugin
     "hrsh7th/cmp-nvim-lsp",
   },
   config = function(plugin, opts)
+    ---@diagnostic disable: missing-fields
     local luasnip = require "luasnip"
     local cmp = require "cmp"
     local lspkind = require "lspkind"
+    local compare = require "cmp.config.compare"
     -- run cmp setup
     cmp.setup(opts)
-    opts.mapping["<C-e>"] = cmp.mapping.abort()
-    opts.mapping["<C-x>"] = cmp.mapping.select_next_item()
+    opts.mapping["<C-e>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.close()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { "i", "s" })
     opts.mapping["<C-d>"] = cmp.mapping.scroll_docs(-4)
     opts.mapping["<C-f>"] = cmp.mapping.scroll_docs(4)
     opts.mapping["<C-n>"] = cmp.mapping(function(fallback)
@@ -63,7 +72,7 @@ return { -- override nvim-cmp plugin
         { name = "buffer" },
       },
       view = {
-        entries = { name = "wildmenu", separator = "|", selection_order = "near_cursor" },
+        entries = { name = "wildmenu", selection_order = "near_cursor" },
       },
     })
     opts.sources = cmp.config.sources {
@@ -87,16 +96,29 @@ return { -- override nvim-cmp plugin
         format = lspkind.cmp_format {
           mode = "symbol_text",
           menu = {
-            buffer = "[Buffer]",
-            nvim_lsp = "[LSP]",
-            luasnip = "[LuaSnip]",
-            nvim_lua = "[Lua]",
-            latex_symbols = "[Latex]",
-            -- symbol_map = { Copilot = "" },
+            buffer = "[buf]",
+            nvim_lsp = "[ ]",
+            nvim_lua = "[api]",
+            path = "[path]",
+            luasnip = "[snip]",
           },
         },
       },
+      sorting = {
+        priority_weight = 2,
+        comparators = {
+          compare.kind,
+          compare.sort_text,
+        },
+      },
+
+      experimental = {
+        native_menu = false,
+
+        ghost_text = false,
+      },
     }
+
     snippet = {
       expand = function(args) require("luasnip").lsp_expand(args.body) end,
     }
