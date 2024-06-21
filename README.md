@@ -9,7 +9,9 @@
 > ![Captura de pantalla 2024-06-20 203730](https://github.com/AppBlitz/config_nvim/assets/166270892/3a21c782-59a3-4711-a347-91d78687152a)
 
 ## Clone the repository
-> git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+```shell
+git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+```
 
 ## Start Neovim 
 > nvim
