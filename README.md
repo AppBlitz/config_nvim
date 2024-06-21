@@ -14,4 +14,6 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ```
 
 ## Start Neovim 
-> nvim
+> ```shell
+nvim
+```
