@@ -17,14 +17,25 @@ return {
 
   -- customize alpha options
   {
-    {
-      "goolord/alpha-nvim",
-      dependencies = {
-        "nvim-tree/nvim-web-devicons",
-        "nvim-lua/plenary.nvim",
-      },
-      config = function() require("alpha").setup(require("alpha.themes.theta").config) end,
+    "goolord/alpha-nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "nvim-lua/plenary.nvim",
     },
+    opts = function(_, opts)
+      -- customize the dashboard header
+      opts.section.header.val = {
+        "   ******                    **                 ",
+        "  **////**                  /**                 ",
+        " **    //   ******   ****** /**  ******   ******",
+        "/**        //////** //**//* /** **////** **//// ",
+        "/**         *******  /** /  /**/**   /**//***** ",
+        "//**    ** **////**  /**    /**/**   /** /////**",
+        " //****** //********/***    ***//******  ****** ",
+        "  //////   //////// ///    ///  //////  //////  ",
+      }
+      return opts
+    end,
   },
 
   -- You can disable default plugins as follows:
