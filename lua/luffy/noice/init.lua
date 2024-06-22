@@ -1,8 +1,8 @@
 ---@diagnostic disable: missing-fields
--- Asegúrate de que el plugin esté cargado
+--Make sure the plugin is loaded
 local noice = require "noice"
 
--- Configura `noice` con las opciones deseadas
+-- Configure `noice` with the desired options
 noice.setup {
   cmdline = {
     enabled = true, -- enables the Noice cmdline UI

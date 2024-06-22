@@ -3,9 +3,6 @@ local M = {}
 ---@diagnostic disable: missing-fields
 M.setup = function(opts)
   local cmp = require "cmp"
-
-  -- Run cmp setup with options
-  cmp.setup(opts)
   local lspkind = require "lspkind"
   local luasnip = require "luasnip"
   local cmp_autopairs = require "nvim-autopairs.completion.cmp"
@@ -15,6 +12,8 @@ M.setup = function(opts)
   end
   cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
 
+  -- Run cmp setup with options
+  cmp.setup(opts)
   cmp.setup {
     mapping = {
       ["<C-d>"] = cmp.mapping.scroll_docs(-4),
@@ -132,10 +131,14 @@ M.setup = function(opts)
     sources = cmp.config.sources({
       { name = "path" },
     }, {
-      { name = "cmdline" },
+      {
+        name = "cmdline",
+        option = {
+          ignore_cmds = { "Man", "!" },
+        },
+      },
     }),
   })
-
   cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
     sources = cmp.config.sources({
       { name = "vim-dadbod-completion" },
