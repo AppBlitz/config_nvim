@@ -22,5 +22,5 @@ return {
     },
   },
   event = "VeryLazy",
-  config = function() require "luffy.completition" end,
+  config = function(plugin, opts) require("luffy.completetion").setup(opts) end,
 }
