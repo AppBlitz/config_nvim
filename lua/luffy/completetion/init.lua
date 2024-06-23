@@ -1,15 +1,15 @@
+---@diagnostic disable: missing-fields
+local cmp = require "cmp"
+local lspkind = require "lspkind"
+local luasnip = require "luasnip"
+local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+local compare = require "cmp.config.compare"
+local feedkey = function(key, mode)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+end
 local M = {}
 
----@diagnostic disable: missing-fields
 M.setup = function(opts)
-  local cmp = require "cmp"
-  local lspkind = require "lspkind"
-  local luasnip = require "luasnip"
-  local cmp_autopairs = require "nvim-autopairs.completion.cmp"
-  local compare = require "cmp.config.compare"
-  local feedkey = function(key, mode)
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
-  end
   cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
 
   -- Run cmp setup with options
