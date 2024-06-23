@@ -7,6 +7,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-git",
+    "windwp/nvim-autopairs",
     {
       "zbirenbaum/copilot-cmp",
       dependencies = {
@@ -22,5 +23,5 @@ return {
     },
   },
   event = "VeryLazy",
-  config = function(plugin, opts) require("luffy.completetion").setup(opts) end,
+  config = function(_, opts) require("luffy.completetion").setup(opts) end,
 }

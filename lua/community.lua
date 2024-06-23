@@ -13,15 +13,16 @@ return {
   { import = "astrocommunity.pack.html-css" },
   -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.typst" },
-  { import = "astrocommunity.pack.kotlin" },
+  -- { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.markdown" },
   -- { import = "astrocommunity.pack.sql" },
   -- import/override with your plugins folder
-  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
+  -- { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
 
   -- editing-support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },

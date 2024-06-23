@@ -34,6 +34,9 @@ return {
         " //****** //********/***    ***//******  ****** ",
         "  //////   //////// ///    ///  //////  //////  ",
       }
+      --[[ opts.section.buttons.val = {
+        opts.button("e", "New file", ":enew<CR>"),
+      } ]]
       return opts
     end,
   },
