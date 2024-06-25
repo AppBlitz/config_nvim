@@ -13,16 +13,4 @@ return {
     transparent.clear_prefix "NeoTree"
     transparent.clear_prefix "lualine"
   end,
-  dependencies = {
-    {
-      "AstroNvim/astrocore",
-      opts = {
-        mappings = {
-          n = {
-            ["<Leader>uT"] = { desc = "Toggle transparency" },
-          },
-        },
-      },
-    },
-  },
 }

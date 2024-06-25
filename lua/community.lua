@@ -5,24 +5,16 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  --[[ { import = "astrocommunity.search.nvim-hlslens" }, ]]
   -- pack
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.angular" },
   { import = "astrocommunity.pack.html-css" },
-  -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.typst" },
-  -- { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.cpp" },
-  -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.json" },
-  -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.markdown" },
-  -- { import = "astrocommunity.pack.sql" },
-  -- import/override with your plugins folder
-  -- { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
 
   -- editing-support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
@@ -54,6 +46,7 @@ return {
               libros = "~/projects/libros/",
               University = "~/projects/University",
               neovim = "~/projects/neovim",
+              anime = "~/projects/anime",
             },
             default_workspace = "notes",
           },
@@ -94,14 +87,10 @@ return {
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.colorscheme.eldritch-nvim" },
-  -- recipes
-  -- { import = "astrocommunity.recipes.disable-tabline" },
   -- markdown & latex
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- statusline
   { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.recipes.telescope-nvchad-theme" },
-  -- diagnostics
-  -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
 }
