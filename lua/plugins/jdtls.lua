@@ -7,7 +7,6 @@ return {
       local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
       local home = os.getenv("HOME")
       local workspace_dir = home .. "/.cache/jdtls/workspace"
-      local lsp_attach = require("luffy.lsp.attach")
       local config = {
         -- The command that starts the language server
         -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
@@ -74,7 +73,6 @@ return {
           bundles = {},
         },
         capabilities = capabilities,
-        on_attach = lsp_attach,
       }
       -- This starts a new client & server,
       -- or attaches to an existing client & server depending on the `root_dir`.
