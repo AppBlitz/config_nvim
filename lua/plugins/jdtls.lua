@@ -7,7 +7,6 @@ return {
       local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
       local home = os.getenv("HOME")
       local workspace_dir = home .. "/proyectosjava/jdtls/workspace" .. project_name
-      local lsp_attach = require("luffy.lsp.java")
       -- This bundles definition is the same as in the previous section (java-debug installation)
       local config = {
         -- The command that starts the language server
