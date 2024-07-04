@@ -33,45 +33,6 @@ return {
   { import = "astrocommunity.motion.nvim-surround" },
   -- note-talking
   { import = "astrocommunity.note-taking.global-note-nvim" },
-  { import = "astrocommunity.note-taking.neorg" },
-  {
-    "nvim-neorg/neorg",
-    opts = {
-      load = {
-        ["core.dirman"] = { -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              programacion = "~/projects/programacio",
-              notes = "~/projects/notes",
-              libros = "~/projects/libros/",
-              University = "~/projects/University",
-              neovim = "~/projects/neovim",
-              anime = "~/projects/anime",
-            },
-            default_workspace = "notes",
-          },
-        },
-        ["core.export"] = {
-          config = {
-            export_dir = "~/projects/export",
-          },
-        },
-        ["core.export.markdown"] = {
-          config = {
-            extensions = "all",
-          },
-        },
-        ["core.ui.calendar"] = {},
-        ["core.concealer"] = {
-          config = {
-            icon_preset = "diamond",
-          },
-        },
-        ["core.summary"] = {},
-        ["core.itero"] = {},
-      },
-    },
-  },
   -- colorscheme
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.mellifluous-nvim" },
