@@ -36,9 +36,9 @@ return {
         ["core.dirman"] = {
           config = {
             workspaces = {
-              programacion = "~/projects/programacio",
+              programming = "~/projects/programming",
               notes = "~/projects/notes",
-              libros = "~/projects/libros/",
+              books = "~/projects/books/",
               University = "~/projects/University",
               neovim = "~/projects/neovim",
               anime = "~/projects/anime",
