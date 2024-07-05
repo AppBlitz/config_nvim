@@ -42,6 +42,7 @@ return {
               University = "~/projects/University",
               neovim = "~/projects/neovim",
               anime = "~/projects/anime",
+              films = "~/projects/films",
             },
 
             default_workspace = "notes",
