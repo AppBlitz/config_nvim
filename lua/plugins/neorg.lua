@@ -3,16 +3,17 @@ return {
   dependencies = { "luarocks.nvim" },
   version = "*",
   config = function()
-    require("neorg").setup({
+    require("neorg").setup {
       load = {
         ["core.defaults"] = {},
         ["core.ui.calendar"] = {},
         ["core.export"] = {},
+        ["core.summary"] = {},
         ["core.keybinds"] = {
           config = {
             default_keybinds = true,
             neorg_leader = ",",
-          }
+          },
         }, -- Adds default keybindings
         ["core.export.markdown"] = {},
         ["core.esupports.metagen"] = {
@@ -20,7 +21,7 @@ return {
             update_date = true,
             timezone = "local",
             type = "auto",
-          }
+          },
         },
         ["core.completion"] = {
           config = {
@@ -47,7 +48,7 @@ return {
           },
         },
       },
-    })
+    }
     vim.wo.foldlevel = 99
     vim.wo.conceallevel = 2
   end,
