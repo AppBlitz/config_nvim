@@ -2,7 +2,6 @@
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
-
 ---@type LazySpec
 return {
   "AstroNvim/astrocore",
@@ -67,6 +66,8 @@ return {
         --   function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
         --   desc = "Previous buffer",
         -- },
+        ["<leader>ze"] = { function() vim.cmd "Huez" end, desc = [[Open Huez]] },
+        ["<leader>zf"] = { function() vim.cmd "HuezFavorites" end, desc = [[Open favorite scheme]] },
         ["<leader>uT"] = { function() vim.cmd "UndotreeToggle" end, desc = "Open undotree" },
         ["w-"] = { function() vim.cmd "Oil" end },
         ["wq"] = { function() vim.cmd "wqall" end },
