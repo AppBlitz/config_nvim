@@ -11,7 +11,7 @@
 ## Clone the repository
 
 ```shell
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+git clone https://github.com/AppBlitz/config_nvim.git ~/.config/nvim
 
 ```
 
