@@ -19,7 +19,7 @@ function M.setup()
       //
   ]]
   -- Set header
-  dashboard.section.header.val = vim.split(logo)
+  dashboard.section.header.val = vim.split(logo, "\n")
 
   -- Set menu
   dashboard.section.buttons.val = {

@@ -1,6 +1,6 @@
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
-local builtin = require "telescope.builtin"
+
 ---@type LazySpec
 return {
 
@@ -16,63 +16,6 @@ return {
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options
-  {
-    "goolord/alpha-nvim",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      "nvim-lua/plenary.nvim",
-    },
-    opts = function(_, opts)
-      -- customize the opts header
-      --[[ opts.section.header.val = {
-        "   ******                    **                 ",
-        "  **////**                  /**                 ",
-        " **    //   ******   ****** /**  ******   ******",
-        "/**        //////** //**//* /** **////** **//// ",
-        "/**         *******  /** /  /**/**   /**//***** ",
-        "//**    ** **////**  /**    /**/**   /** /////**",
-        " //****** //********/***    ***//******  ****** ",
-        "  //////   //////// ///    ///  //////  //////  ",
-      }
-      opts.section.buttons.val = {
-        opts.button("e", "New file", ":enew<CR>"),
-      } ]]
-      local logo = [[
-     .-.
-       __/   (
-     , '-.____\
-      u=='/  \
-         /_/  \
-       .-''   |
-      (  ____/_____
-      _>_/.--------
-      \///
-       //
-      //
-  ]]
-      opts.section.header.val = vim.split(logo, "\n")
-      opts.section.buttons.val = {
-        { type = "text", val = "Telescope", opts = { hl = "SpecialComment", position = "center" } },
-        opts.button("f", " File Browser", builtin.find_files),
-        opts.button("r", "  Recent", builtin.oldfiles),
-        opts.button("e", "  New file", "<cmd>ene<CR>"),
-        opts.button("u", "󱐥  Update plugins", "<cmd>Lazy sync<CR>"),
-        opts.button("t", "  Install language tools", "<cmd>Mason<CR>"),
-
-        { type = "text", val = "Neovim", opts = { hl = "SpecialComment", position = "center" } },
-        opts.button("q", "☠  Quit NVIM", ":quitall<cr>"),
-
-        { type = "text", val = "Files", opts = { hl = "SpecialComment", position = "center" } },
-        opts.button("o", " Oil", "<CMD>Oil<CR>"),
-      }
-      local message = [[
-Glück
-]]
-      opts.section.footer.val = vim.split(message, "\n")
-      return opts
-    end,
-  },
-
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
 
