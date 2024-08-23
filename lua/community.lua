@@ -15,6 +15,9 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.php" },
+  -- programmig-support
+  { import = "astrocommunity.programming-language-support.rest-nvim" },
 
   -- editing-support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
