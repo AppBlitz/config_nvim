@@ -37,6 +37,7 @@ return {
           config = {
             workspaces = {
               programming = "~/projects/programming",
+              Series = "~/projects/Series",
               notes = "~/projects/notes",
               books = "~/projects/books/",
               University = "~/projects/University",
