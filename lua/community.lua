@@ -16,8 +16,10 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.pack.tailwindcss" },
   -- programmig-support
   { import = "astrocommunity.programming-language-support.rest-nvim" },
+  { import = "astrocommunity.file-explorer.mini-files" },
 
   -- editing-support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
