@@ -11,6 +11,8 @@ return {
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.astro" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.go" },
   -- programmig-support
   { import = "astrocommunity.programming-language-support.rest-nvim" },
   { import = "astrocommunity.file-explorer.mini-files" },
@@ -29,4 +31,7 @@ return {
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   -- import/override with your plugins folder
+
+  --Note
+  { import = "astrocommunity.note-taking.global-note-nvim" },
 }
