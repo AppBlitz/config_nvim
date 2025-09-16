@@ -2,5 +2,8 @@ return {
   "zbirenbaum/copilot.lua",
   cmd = "Copilot",
   event = "InsertEnter",
-  config = function() require("copilot").setup {} end,
+  opts = {
+    model = "gpt-4o",
+    max_completion_tokens = 1024,
+  },
 }

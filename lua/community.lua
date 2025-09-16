@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.angular" },
   -- programmig-support
   { import = "astrocommunity.programming-language-support.rest-nvim" },
   { import = "astrocommunity.file-explorer.mini-files" },
@@ -25,8 +26,8 @@ return {
   -- media
   { import = "astrocommunity.media.vim-wakatime" },
   -- markdown & latex
-  { import = "astrocommunity.markdown-and-latex.vimtex" },
-  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- colorscheme
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
@@ -34,4 +35,8 @@ return {
 
   --Note
   { import = "astrocommunity.note-taking.global-note-nvim" },
+
+  --Terminal
+
+  { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" },
 }
