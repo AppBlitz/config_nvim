@@ -15,7 +15,9 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.angular" },
   -- programmig-support
-  { import = "astrocommunity.programming-language-support.rest-nvim" },
+  --{ import = "astrocommunity.programming-language-support.rest-nvim" },
+
+  { import = "astrocommunity.programming-language-support.kulala-nvim" },
   { import = "astrocommunity.file-explorer.mini-files" },
   -- editing-support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
