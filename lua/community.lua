@@ -10,12 +10,10 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.json" },
-  { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.angular" },
   -- programmig-support
-  --{ import = "astrocommunity.programming-language-support.rest-nvim" },
 
   { import = "astrocommunity.programming-language-support.kulala-nvim" },
   { import = "astrocommunity.file-explorer.mini-files" },
@@ -29,7 +27,6 @@ return {
   { import = "astrocommunity.media.vim-wakatime" },
   -- markdown & latex
   { import = "astrocommunity.markdown-and-latex.markview-nvim" },
-  -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- colorscheme
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
